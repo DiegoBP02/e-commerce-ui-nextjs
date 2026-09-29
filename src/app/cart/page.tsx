@@ -124,7 +124,7 @@ const CartPage = () => {
                 <div className="flex gap-8">
                   <div className="relative w-32 h-32 bg-gray-50 rounded-lg overflow-hidden">
                     <Image
-                      src={item.images[item.seletectedColor]}
+                      src={item.images[item.selectedColor]}
                       alt={item.name}
                       fill
                       className="object-contain"
@@ -140,7 +140,7 @@ const CartPage = () => {
                         Size: {item.selectedSize}
                       </p>
                       <p className="text-sm text-gray-500">
-                        Color: {item.seletectedColor}
+                        Color: {item.selectedColor}
                       </p>
                     </div>
                     <p className="font-medium">${item.price.toFixed(2)} </p>

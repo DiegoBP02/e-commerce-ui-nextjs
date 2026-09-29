@@ -1,9 +1,12 @@
 "use client";
 
+import useCartStore from "@/app/stores/cartStore";
 import { ShoppingCart } from "lucide-react";
 import Link from "next/link";
 
 const ShoppingCartIcon = () => {
+  const { cart } = useCartStore();
+
   return (
     <Link href="/cart" className="relative">
       <ShoppingCart className="w-4 h-4 text-gray-600" />
@@ -11,7 +14,7 @@ const ShoppingCartIcon = () => {
         className="absolute -top-3 -right-3 bg-amber-400 text-gray-600 
       rounded-full w-4 h-4 flex items-center justify-center text-xs font-medium"
       >
-        0
+        {cart.length}
       </span>
     </Link>
   );
