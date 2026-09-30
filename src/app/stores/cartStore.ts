@@ -1,5 +1,4 @@
 import { CartStoreActionsType, CartStoreStateType } from "@/types";
-import { set } from "zod/v4/mini";
 import { create } from "zustand";
 import { createJSONStorage } from "zustand/middleware";
 import { persist } from "zustand/middleware";
